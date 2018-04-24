@@ -35,6 +35,12 @@ namespace Repo2App
         {
             return Color;
         }
+
+        int counter;
+        void DoubleCounter()
+        {
+            counter *= 2;
+        }
     }
 
     interface IColorable
