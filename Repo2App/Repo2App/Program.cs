@@ -20,5 +20,10 @@ namespace Repo2App
         {
             System.Console.WriteLine("Func01 Running");
         }
+
+        public static void Func02()
+        {
+            System.Console.WriteLine("Func02 Running");
+        }
     }
 }
