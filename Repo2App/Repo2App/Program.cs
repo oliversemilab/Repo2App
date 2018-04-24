@@ -36,10 +36,14 @@ namespace Repo2App
             return Color;
         }
 
-        int counter;
+        int Counter;
         void DoubleCounter()
         {
-            counter *= 2;
+            Counter *= 2;
+        }
+        void SetCounter (int count)
+        {
+            Counter = count;
         }
     }
 
