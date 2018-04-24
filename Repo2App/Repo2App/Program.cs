@@ -26,4 +26,10 @@ namespace Repo2App
             System.Console.WriteLine("Func02 Running");
         }
     }
+
+    interface IColorable
+    {
+        String GetColor();
+        void SetColor(String col);
+    }
 }
