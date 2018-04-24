@@ -42,4 +42,11 @@ namespace Repo2App
         string GetColor();
         void SetColor(string col);
     }
+
+    interface ICountable
+    {
+        int GetCount();
+        void SetCounter(int n);
+        void DoubleCounter();
+    }
 }
