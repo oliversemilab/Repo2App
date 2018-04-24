@@ -45,6 +45,10 @@ namespace Repo2App
         {
             Counter = count;
         }
+        int GetCounter()
+        {
+            return Counter;
+        }
     }
 
     interface IColorable
