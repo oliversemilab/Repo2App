@@ -14,7 +14,7 @@ namespace Repo2App
         }
     }
 
-    class RandomFunctionBox1
+    class RandomFunctionBox1 : IColorable
     {
         public static void Func01()
         {
@@ -25,11 +25,21 @@ namespace Repo2App
         {
             System.Console.WriteLine("Func02 Running");
         }
+
+        string Color;
+        public void SetColor(string col)
+        {
+            Color = col;
+        }
+        public string GetColor()
+        {
+            return Color;
+        }
     }
 
     interface IColorable
     {
-        String GetColor();
-        void SetColor(String col);
+        string GetColor();
+        void SetColor(string col);
     }
 }
