@@ -12,7 +12,7 @@ namespace Repo2App
         {
             System.Console.WriteLine("Hello World");
             RandomFunctionBox1 RFB = new RandomFunctionBox1();
-            System.Console.WriteLine(RFB is IColorable);
+            //System.Console.WriteLine(RFB is IColorable);
         }
     }
 
