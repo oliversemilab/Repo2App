@@ -14,7 +14,7 @@ namespace Repo2App
         }
     }
 
-    class RandomFunctionBox1 : IColorable
+    class RandomFunctionBox1 : IColorable, ICountable
     {
         public static void Func01()
         {
@@ -37,15 +37,15 @@ namespace Repo2App
         }
 
         int Counter;
-        void DoubleCounter()
+        public void DoubleCounter()
         {
             Counter *= 2;
         }
-        void SetCounter (int count)
+        public void SetCounter (int count)
         {
             Counter = count;
         }
-        int GetCounter()
+        public int GetCounter()
         {
             return Counter;
         }
@@ -59,7 +59,7 @@ namespace Repo2App
 
     interface ICountable
     {
-        int GetCount();
+        int GetCounter();
         void SetCounter(int n);
         void DoubleCounter();
     }
