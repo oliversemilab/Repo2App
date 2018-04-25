@@ -51,6 +51,11 @@ namespace Repo2App
         }
     }
 
+    class RandomFunctionBox2
+    {
+
+    }
+
     interface IColorable
     {
         string GetColor();
