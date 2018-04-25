@@ -138,6 +138,34 @@ namespace Repo2App
         }
         string Title { get; set; }
         string Author { get; set; }
+        int _Length;
+        int Length()
+        {
+            return _Length;
+        }
+        int _CurrentPage;
+        int CurrentPage()
+        {
+            return _CurrentPage;
+        }
+        void GoToNextPage()
+        {
+            if (_CurrentPage < _Length)
+            {
+                _CurrentPage++;
+            }
+        }
+        void GoToPreviousPage()
+        {
+            if (_CurrentPage > 0)
+            {
+                _CurrentPage--;
+            }
+        }
+        void GoToFirstPage()
+        {
+            _CurrentPage = 1;
+        }
     }
 
 }
