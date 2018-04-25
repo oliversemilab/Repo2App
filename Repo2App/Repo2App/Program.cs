@@ -18,7 +18,7 @@ namespace Repo2App
 
     interface IRandomFunctionBox : IColorable, ICountable
     {
-
+        void DoSomethingNotSoRandom();
     }
 
     class RandomFunctionBox1 : IRandomFunctionBox
@@ -75,6 +75,10 @@ namespace Repo2App
                 }
             }
         }
+        public void DoSomethingNotSoRandom()
+        {
+            DoubleCounter();
+        }
     }
 
     class RandomFunctionBox2 : IRandomFunctionBox
@@ -101,6 +105,10 @@ namespace Repo2App
         public string GetColor()
         {
             return Color;
+        }
+        public void DoSomethingNotSoRandom()
+        {
+            SetCounter(7);
         }
     }
 
