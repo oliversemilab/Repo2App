@@ -136,6 +136,7 @@ namespace Repo2App
         {
             return Color;
         }
+        string Title { get; set; }
     }
 
 }
