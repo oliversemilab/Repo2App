@@ -131,5 +131,6 @@ namespace Repo2App
         int CurrentPage();
         void GoToNextPage();
         void GoToFirstPage();
+        void GoToPreviousPage();
     }
 }
