@@ -54,6 +54,10 @@ namespace Repo2App
     class RandomFunctionBox2
     {
         int Counter;
+        public void DoubleCounter()
+        {
+            Counter *= 5;
+        }
     }
 
     interface IColorable
