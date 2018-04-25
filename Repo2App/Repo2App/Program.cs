@@ -12,10 +12,16 @@ namespace Repo2App
         {
             System.Console.WriteLine("Hello World");
             RandomFunctionBox1 RFB = new RandomFunctionBox1();
+            System.Console.WriteLine(RFB is IColorable);
         }
     }
 
-    class RandomFunctionBox1 : IColorable, ICountable
+    interface IRandomFunctionBox : IColorable, ICountable
+    {
+
+    }
+
+    class RandomFunctionBox1 : IRandomFunctionBox
     {
         public static void Func01()
         {
@@ -71,7 +77,7 @@ namespace Repo2App
         }
     }
 
-    class RandomFunctionBox2 : ICountable, IColorable
+    class RandomFunctionBox2 : IRandomFunctionBox
     {
         int Counter;
         public void DoubleCounter()
