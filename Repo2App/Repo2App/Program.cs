@@ -124,4 +124,10 @@ namespace Repo2App
         void SetCounter(int n);
         void DoubleCounter();
     }
+
+    interface IPageable
+    {
+        int Lenth();
+        int CurrentPage();
+    }
 }
