@@ -124,4 +124,18 @@ namespace Repo2App
         void SetCounter(int n);
         void DoubleCounter();
     }
+
+    class Book : IColorable
+    {
+        string Color;
+        public void SetColor(string col)
+        {
+            Color = col;
+        }
+        public string GetColor()
+        {
+            return Color;
+        }
+    }
+
 }
