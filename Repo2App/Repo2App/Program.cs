@@ -51,7 +51,7 @@ namespace Repo2App
         }
     }
 
-    class RandomFunctionBox2
+    class RandomFunctionBox2 : ICountable
     {
         int Counter;
         public void DoubleCounter()
