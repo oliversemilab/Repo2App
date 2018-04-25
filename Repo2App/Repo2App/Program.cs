@@ -129,5 +129,7 @@ namespace Repo2App
     {
         int Lenth();
         int CurrentPage();
+        void GoToNextPage();
+        void GoToFirstPage();
     }
 }
