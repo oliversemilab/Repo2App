@@ -11,6 +11,7 @@ namespace Repo2App
         static void Main(string[] args)
         {
             System.Console.WriteLine("Hello World");
+            System.Console.WriteLine("A Line was added on Master branch");
         }
     }
 
