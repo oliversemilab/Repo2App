@@ -11,14 +11,7 @@ namespace Repo2App
         static void Main(string[] args)
         {
             System.Console.WriteLine("Hello World");
-            System.Console.WriteLine("Hmm");
             RandomFunctionBox1 RFB = new RandomFunctionBox1();
-            RFB.MagicNumber = 50;
-            System.Console.WriteLine(RFB.MagicNumber);
-            RFB.MagicNumber = 150;
-            System.Console.WriteLine(RFB.MagicNumber);
-            RFB.MagicNumber = 80;
-            System.Console.WriteLine(RFB.MagicNumber);
         }
     }
 
@@ -63,7 +56,7 @@ namespace Repo2App
         private int _MagicNumber;
         public int MagicNumber
         {
-            get { System.Console.WriteLine("get Running"); ;  return _MagicNumber; }
+            get { return _MagicNumber; }
             set
             {
                 if (value > 100 || value < 0)
