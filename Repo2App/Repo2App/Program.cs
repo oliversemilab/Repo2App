@@ -53,7 +53,7 @@ namespace Repo2App
 
     class RandomFunctionBox2
     {
-
+        int Counter;
     }
 
     interface IColorable
