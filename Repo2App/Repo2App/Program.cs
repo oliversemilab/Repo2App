@@ -13,8 +13,12 @@ namespace Repo2App
             System.Console.WriteLine("Hello World");
             System.Console.WriteLine("Hmm");
             RandomFunctionBox1 RFB = new RandomFunctionBox1();
-            RandomFunctionBox1.NumberReturner NS = RandomFunctionBox1.NumberFunction;
-            System.Console.WriteLine(NS());
+            RFB.MagicNumber = 50;
+            System.Console.WriteLine(RFB.MagicNumber);
+            RFB.MagicNumber = 150;
+            System.Console.WriteLine(RFB.MagicNumber);
+            RFB.MagicNumber = 80;
+            System.Console.WriteLine(RFB.MagicNumber);
         }
     }
 
@@ -55,6 +59,23 @@ namespace Repo2App
         }
         public delegate int NumberReturner();
         public static int NumberFunction() { return 5; }
+
+        private int _MagicNumber;
+        public int MagicNumber
+        {
+            get { System.Console.WriteLine("get Running"); ;  return _MagicNumber; }
+            set
+            {
+                if (value > 100 || value < 0)
+                {
+                    _MagicNumber = 42;
+                }
+                else
+                {
+                    _MagicNumber = value;
+                }
+            }
+        }
     }
 
     class RandomFunctionBox2 : ICountable, IColorable
