@@ -166,6 +166,7 @@ namespace Repo2App
         {
             _CurrentPage = 1;
         }
+        bool BookHasBeenRead;
     }
 
 }
