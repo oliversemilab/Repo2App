@@ -52,7 +52,7 @@ namespace Repo2App
         }
     }
 
-    class RandomFunctionBox2 : ICountable
+    class RandomFunctionBox2 : ICountable, IColorable
     {
         int Counter;
         public void DoubleCounter()
@@ -66,6 +66,16 @@ namespace Repo2App
         public int GetCounter()
         {
             return Counter;
+        }
+
+        string Color;
+        public void SetColor(string col)
+        {
+            Color = col;
+        }
+        public string GetColor()
+        {
+            return Color;
         }
     }
 
