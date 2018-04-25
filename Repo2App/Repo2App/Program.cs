@@ -125,6 +125,51 @@ namespace Repo2App
         void DoubleCounter();
     }
 
+    class Book : IColorable
+    {
+        string Color;
+        public void SetColor(string col)
+        {
+            Color = col;
+        }
+        public string GetColor()
+        {
+            return Color;
+        }
+        string Title { get; set; }
+        string Author { get; set; }
+        int _Length;
+        int Length()
+        {
+            return _Length;
+        }
+        int _CurrentPage;
+        int CurrentPage()
+        {
+            return _CurrentPage;
+        }
+        void GoToNextPage()
+        {
+            if (_CurrentPage < _Length)
+            {
+                _CurrentPage++;
+            }
+        }
+        void GoToPreviousPage()
+        {
+            if (_CurrentPage > 0)
+            {
+                _CurrentPage--;
+            }
+        }
+        void GoToFirstPage()
+        {
+            _CurrentPage = 1;
+        }
+        bool BookHasBeenRead;
+    }
+
+
     interface IPageable
     {
         int Lenth();
