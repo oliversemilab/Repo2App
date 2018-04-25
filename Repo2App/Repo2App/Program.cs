@@ -12,6 +12,9 @@ namespace Repo2App
         {
             System.Console.WriteLine("Hello World");
             System.Console.WriteLine("Hmm");
+            RandomFunctionBox1 RFB = new RandomFunctionBox1();
+            RandomFunctionBox1.NumberReturner NS = RandomFunctionBox1.NumberFunction;
+            System.Console.WriteLine(NS());
         }
     }
 
@@ -50,6 +53,8 @@ namespace Repo2App
         {
             return Counter;
         }
+        public delegate int NumberReturner();
+        public static int NumberFunction() { return 5; }
     }
 
     class RandomFunctionBox2 : ICountable, IColorable
