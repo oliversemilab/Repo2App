@@ -12,8 +12,29 @@ namespace Repo2App
         {
             System.Console.WriteLine("Hello World");
             RandomFunctionBox1 RFB = new RandomFunctionBox1();
-            //System.Console.WriteLine(RFB is IColorable);
         }
+    }
+
+    interface IColorable
+    {
+        string GetColor();
+        void SetColor(string col);
+    }
+
+    interface ICountable
+    {
+        int GetCounter();
+        void SetCounter(int n);
+        void DoubleCounter();
+    }
+
+    interface IPageable
+    {
+        int Length();
+        int CurrentPage();
+        void GoToNextPage();
+        void GoToFirstPage();
+        void GoToPreviousPage();
     }
 
     interface IRandomFunctionBox : IColorable, ICountable
@@ -112,19 +133,6 @@ namespace Repo2App
         }
     }
 
-    interface IColorable
-    {
-        string GetColor();
-        void SetColor(string col);
-    }
-
-    interface ICountable
-    {
-        int GetCounter();
-        void SetCounter(int n);
-        void DoubleCounter();
-    }
-
     class Book : IColorable, IPageable
     {
         string Color;
@@ -136,8 +144,8 @@ namespace Repo2App
         {
             return Color;
         }
-        string Title { get; set; }
-        string Author { get; set; }
+        private string Title { get; set; }
+        private string Author { get; set; }
         int _Length;
         public int Length()
         {
@@ -167,15 +175,5 @@ namespace Repo2App
             _CurrentPage = 1;
         }
         bool BookHasBeenRead;
-    }
-
-
-    interface IPageable
-    {
-        int Length();
-        int CurrentPage();
-        void GoToNextPage();
-        void GoToFirstPage();
-        void GoToPreviousPage();
     }
 }
